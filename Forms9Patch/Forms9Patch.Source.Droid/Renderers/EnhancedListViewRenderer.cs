@@ -23,6 +23,7 @@ namespace Forms9Patch.Droid
         }
         #endregion
 
+        public EnhancedListViewRenderer(Android.Content.Context context) : base(context) { }
 
         #region ElementChanged
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.ListView> e)

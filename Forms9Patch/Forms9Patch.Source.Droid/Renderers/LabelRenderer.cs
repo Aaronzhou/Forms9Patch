@@ -84,7 +84,7 @@ namespace Forms9Patch.Droid
         /// <summary>
         /// Initializes a new instance of the <see cref="LabelRenderer"/> class.
         /// </summary>
-        public LabelRenderer()
+        public LabelRenderer(Android.Content.Context context) : base(context)
         {
             _instance = _instances++;
             AutoPackage = false;

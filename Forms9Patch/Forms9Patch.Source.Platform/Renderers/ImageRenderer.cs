@@ -39,7 +39,7 @@ namespace Forms9Patch
 
 
         #region Constructor / disposal
-        public ImageRenderer() => _instance = _instances++;
+        public ImageRenderer(Android.Content.Context context) : base(context) => _instance = _instances++;
         #endregion
 
 

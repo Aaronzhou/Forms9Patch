@@ -42,7 +42,7 @@ namespace Forms9Patch
 
 
         #region Constructor / Disposer
-        public F9pLayoutRenderer()
+        public F9pLayoutRenderer(Android.Content.Context context) : base(context)
         {
             _instance = _instances++;
 

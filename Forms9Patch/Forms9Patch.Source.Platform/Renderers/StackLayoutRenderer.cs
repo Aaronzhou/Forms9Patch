@@ -17,5 +17,8 @@ namespace Forms9Patch
     /// <summary>
     /// Forms9Patch Stack layout renderer.
     /// </summary>
-    internal class StackLayoutRenderer : F9pLayoutRenderer<StackLayout> { }
+    internal class StackLayoutRenderer : F9pLayoutRenderer<StackLayout>
+    {
+        public StackLayoutRenderer(Android.Content.Context context) : base(context) { }
+    }
 }

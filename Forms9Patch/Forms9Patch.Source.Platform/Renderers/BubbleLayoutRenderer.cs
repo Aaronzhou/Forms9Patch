@@ -42,7 +42,7 @@ namespace Forms9Patch
         #endregion
 
         #region Constructor / Disposer
-        public BubbleLayoutRenderer()
+        public BubbleLayoutRenderer(Android.Content.Context context) : base(context)
         {
             _instances = _instance++;
         }
