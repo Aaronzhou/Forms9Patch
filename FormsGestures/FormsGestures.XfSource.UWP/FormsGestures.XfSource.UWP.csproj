@@ -108,7 +108,7 @@
   <Import Project="..\FormsGestures.Source.UWP\FormsGestures.UWP.targets" />
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.4</Version>
+      <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
