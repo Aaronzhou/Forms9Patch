@@ -12,7 +12,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
@@ -208,7 +208,6 @@
       <Version>1.60.0</Version>
     </PackageReference>
   </ItemGroup>
-
   <!-- Project References -->
   <ItemGroup>
     <ProjectReference Include="..\..\Forms9Patch\Forms9Patch.XfNuget\Forms9Patch.XfNuget.csproj">
@@ -244,8 +243,6 @@
       <Name>Forms9PatchDemo.F9pSource</Name>
     </ProjectReference>
   </ItemGroup>
-
-  
   <ItemGroup>
     <None Include="Forms9PatchDemo.UWP_TemporaryKey.pfx" />
   </ItemGroup>

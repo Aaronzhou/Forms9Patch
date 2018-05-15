@@ -21,6 +21,7 @@ using Android.Views;
 using Xamarin.Forms.Platform.Android;
 namespace Forms9Patch.Droid
 #elif WINDOWS_UWP
+using Windows.Foundation;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation.Peers;
@@ -89,6 +90,11 @@ namespace Forms9Patch
 #endif
 #if WINDOWS_UWP
                 SizeChanged += OnSizeChanged;
+                if (Children.Contains(Control) && Children.IndexOf(Control)!=0)
+                {
+                    Children.Remove(Control);
+                    Children.Insert(0, Control);
+                }
 #endif
 
                 if (!string.IsNullOrEmpty(Element.AutomationId))
@@ -144,6 +150,11 @@ namespace Forms9Patch
             }
         }
 
+        protected override Windows.Foundation.Size ArrangeOverride(Windows.Foundation.Size finalSize)
+        {
+            var children = this.Children;
+            return base.ArrangeOverride(finalSize);
+        }
 #endif
         #endregion
     }

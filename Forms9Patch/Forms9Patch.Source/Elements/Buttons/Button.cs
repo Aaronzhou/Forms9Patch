@@ -20,20 +20,6 @@ namespace Forms9Patch
     {
         #region Xamarin.Forms emulation properties
         /// <summary>
-        /// The border radius property.
-        /// </summary>
-        public static readonly BindableProperty BorderRadiusProperty = Xamarin.Forms.Button.BorderRadiusProperty;
-        /// <summary>
-        /// Gets or sets the border radius (Xamarin.Forms.Button compatibility property).
-        /// </summary>
-        /// <value>The border radius.</value>
-        public int BorderRadius
-        {
-            get { return (int)GetValue(BorderRadiusProperty); }
-            set { SetValue(BorderRadiusProperty, value); }
-        }
-
-        /// <summary>
         /// The border width property.
         /// </summary>
         public static readonly BindableProperty BorderWidthProperty = Xamarin.Forms.Button.BorderWidthProperty;
@@ -1660,8 +1646,8 @@ namespace Forms9Patch
 
             if (propertyName == BorderWidthProperty.PropertyName)
                 OutlineWidth = (float)BorderWidth;
-            else if (propertyName == BorderRadiusProperty.PropertyName)
-                OutlineRadius = BorderRadius;
+            else if (propertyName == CornerRadiusProperty.PropertyName)
+                OutlineRadius = CornerRadius;
             else if (propertyName == BorderColorProperty.PropertyName)
                 OutlineColor = BorderColor;
 

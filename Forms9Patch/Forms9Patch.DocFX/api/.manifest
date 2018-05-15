@@ -108,8 +108,6 @@
   "Forms9Patch.Button.BackgroundColorProperty": "Forms9Patch.Button.yml",
   "Forms9Patch.Button.BorderColor": "Forms9Patch.Button.yml",
   "Forms9Patch.Button.BorderColorProperty": "Forms9Patch.Button.yml",
-  "Forms9Patch.Button.BorderRadius": "Forms9Patch.Button.yml",
-  "Forms9Patch.Button.BorderRadiusProperty": "Forms9Patch.Button.yml",
   "Forms9Patch.Button.BorderWidth": "Forms9Patch.Button.yml",
   "Forms9Patch.Button.BorderWidthProperty": "Forms9Patch.Button.yml",
   "Forms9Patch.Button.Clicked": "Forms9Patch.Button.yml",

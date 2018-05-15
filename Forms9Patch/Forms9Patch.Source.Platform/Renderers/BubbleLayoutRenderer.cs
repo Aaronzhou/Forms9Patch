@@ -45,6 +45,7 @@ namespace Forms9Patch
         public BubbleLayoutRenderer()
         {
             _instances = _instance++;
+            
         }
 
         protected override void Dispose(bool disposing)
@@ -147,6 +148,13 @@ namespace Forms9Patch
                 //SizeChanged += OnSizeChanged;
                 if (!string.IsNullOrEmpty(Element.AutomationId))
                     SetAutomationId(Element.AutomationId);
+#if WINDOWS_UWP
+                if (Children.Contains(Control) && Children.IndexOf(Control) != 0)
+                {
+                    Children.Remove(Control);
+                    Children.Insert(0, Control);
+                }
+#endif
             }
         }
 
@@ -157,6 +165,17 @@ namespace Forms9Patch
             base.OnElementPropertyChanged(sender, e);
         }
 
+
+#if WINDOWS_UWP
+
+        
+
+        protected override Windows.Foundation.Size ArrangeOverride(Windows.Foundation.Size finalSize)
+        {
+            var children = this.Children;
+            return base.ArrangeOverride(finalSize);
+        }
+#endif
 
         #endregion
     }
